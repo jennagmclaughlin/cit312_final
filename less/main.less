@@ -1,0 +1,60 @@
+@import url(./variables.less);
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box!important;
+}
+
+body {
+    background-color: @body-bg;
+    font-family: @font;
+    font-size: @base-unit;
+}
+
+nav {
+    a {
+        display: inline-block!important;
+        margin: (@base-unit / 2);
+    }
+    .nav-active {
+        font-weight: 600;
+    }
+}
+
+#container {
+    padding: @base-unit * 2;
+}
+
+.btn-secondary {
+    margin: 0 4px;
+}
+
+.mapRow {
+    margin-bottom: (@base-unit * 2);
+
+    img {
+        width: 400px;
+    }
+}
+
+.row {
+    width: 100%!important;
+}
+
+.state {
+    background-color: @state-bg;
+    border-radius: @base-unit;
+    padding: @base-unit;
+    margin: @base-unit;
+    box-shadow: 0 (@base-unit / 4) (@base-unit / 2) @box-shadow;
+    h2 {
+        font-weight: 700;
+    }
+    img {
+        width: 150px;
+        object-fit: cover;
+    }
+}

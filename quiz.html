@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The United States -- Quiz</title>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet/less" type="text/css" href="./less/main.less"/>
+    <script src="quiz.js" type="text/javascript" defer></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
+</head>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="#"
+            ><img
+              src="assets/favicon/favicon-32x32.png"
+              class="logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+                <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+                    <a href="index.html" title="Home">Home</a>
+                  </li>
+                <li class="nav-item nav-active py-2 py-lg-1 col-12 col-lg-auto">
+                  <a href="quiz.html" title="Quiz">Quiz</a>
+                </li>
+              </ul>
+          </div>
+        </div>
+    </nav>
+    <div id="container">
+        <p>1.) Which was the first official state?</p>
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary">
+                    <input type="radio" name="first_state" id="west virginia" autocomplete="off" checked> West Virginia
+                </label>
+                <label class="btn btn-secondary">
+                    <input type="radio" name="first_state" id="delaware" autocomplete="off"> Delaware
+                </label>
+                <label class="btn btn-secondary">
+                    <input type="radio" name="first_state" id="indiana" autocomplete="off"> Indiana
+                </label>
+            </div>
+          <button class="btn btn-warning" id="first_state">Check answer</button>
+          <p id="correct_first_state"></p>
+
+          <br>
+
+          <p>2.) How many states are there?</p>
+            <div class="btn-group btn-group-toggle number-states" data-toggle="buttons">
+                <label class="btn btn-secondary">
+                    <input type="radio" name="number_states" id="fifty" autocomplete="off" checked> 50
+                </label>
+                <label class="btn btn-secondary">
+                    <input type="radio" name="number_states" id="fortyNine" autocomplete="off"> 49
+                </label>
+                <label class="btn btn-secondary">
+                    <input type="radio" name="number_states" id="fortySeven" autocomplete="off"> 47
+                </label>
+            </div>
+          <button class="btn btn-warning" id="number_states">Check answer</button>
+          <p id="correct_number_states"></p>
+
+          <br>
+
+          <p>3.) What's the capitol of California?</p>
+            <div class="btn-group btn-group-toggle capitol-states" data-toggle="buttons">
+                <label class="btn btn-secondary">
+                    <input type="radio" name="capitol" id="hollywood" autocomplete="off" checked> Hollywood
+                </label>
+                <label class="btn btn-secondary">
+                    <input type="radio" name="capitol" id="sacramento" autocomplete="off"> Sacramento
+                </label>
+                <label class="btn btn-secondary">
+                    <input type="radio" name="capitol" id="losAngeles" autocomplete="off"> Los Angeles
+                </label>
+            </div>
+          <button class="btn btn-warning" id="capitol_states">Check answer</button>
+          <p id="correct_capitol_states"></p>
+
+          <br>
+
+          <p>4.) Which state has the most people?</p>
+            <div class="btn-group btn-group-toggle people-states" data-toggle="buttons">
+                <label class="btn btn-secondary">
+                    <input type="radio" name="people" id="texas" autocomplete="off" checked> Texas
+                </label>
+                <label class="btn btn-secondary">
+                    <input type="radio" name="people" id="newYork" autocomplete="off"> New York
+                </label>
+                <label class="btn btn-secondary">
+                    <input type="radio" name="people" id="california" autocomplete="off"> California
+                </label>
+            </div>
+          <button class="btn btn-warning" id="people_states">Check answer</button>
+          <p id="correct_people_states"></p>
+
+          <br>
+
+          <p>5.) Which state has the least amount of people?</p>
+            <div class="btn-group btn-group-toggle least-states" data-toggle="buttons">
+                <label class="btn btn-secondary">
+                    <input type="radio" name="least" id="rhodeIsland" autocomplete="off" checked> Rhode Island
+                </label>
+                <label class="btn btn-secondary">
+                    <input type="radio" name="least" id="wyoming" autocomplete="off"> Wyoming
+                </label>
+                <label class="btn btn-secondary">
+                    <input type="radio" name="least" id="iowa" autocomplete="off"> Iowa
+                </label>
+            </div>
+          <button class="btn btn-warning" id="least_states">Check answer</button>
+          <p id="correct_least_states"></p>
+
+          <br>
+
+          <p>6.) Which state has Baton Rogue as its capitol?</p>
+            <div class="btn-group btn-group-toggle baton-states" data-toggle="buttons">
+                <label class="btn btn-secondary">
+                    <input type="radio" name="baton" id="louisiana" autocomplete="off" checked> Louisiana
+                </label>
+                <label class="btn btn-secondary">
+                    <input type="radio" name="baton" id="kansas" autocomplete="off"> Kansas
+                </label>
+                <label class="btn btn-secondary">
+                    <input type="radio" name="baton" id="alabama" autocomplete="off"> Alabama
+                </label>
+            </div>
+          <button class="btn btn-warning" id="baton_states">Check answer</button>
+          <p id="correct_baton_states"></p>
+
+          <br>
+
+          <p>7.) Which state has Kansas City as its capitol?</p>
+            <div class="btn-group btn-group-toggle kansas-states" data-toggle="buttons">
+                <label class="btn btn-secondary">
+                    <input type="radio" name="kansas" id="kentucky" autocomplete="off" checked> Kentucky
+                </label>
+                <label class="btn btn-secondary">
+                    <input type="radio" name="kansas" id="kansas" autocomplete="off"> Kansas
+                </label>
+                <label class="btn btn-secondary">
+                    <input type="radio" name="kansas" id="missouri" autocomplete="off"> Missouri
+                </label>
+            </div>
+          <button class="btn btn-warning" id="kansas_states">Check answer</button>
+          <p id="correct_kansas_states"></p>
+
+          <br>
+
+          <p>8.) Which state is the "lone star" state?</p>
+            <div class="btn-group btn-group-toggle lone-states" data-toggle="buttons">
+                <label class="btn btn-secondary">
+                    <input type="radio" name="lone" id="texas" autocomplete="off" checked> Texas
+                </label>
+                <label class="btn btn-secondary">
+                    <input type="radio" name="lone" id="florida" autocomplete="off"> Florida
+                </label>
+                <label class="btn btn-secondary">
+                    <input type="radio" name="lone" id="missouri" autocomplete="off"> Missouri
+                </label>
+            </div>
+          <button class="btn btn-warning" id="lone_states">Check answer</button>
+          <p id="correct_lone_states"></p>
+
+          <br>
+
+          <p>9.) Which state has Mt. Rushmore?</p>
+            <div class="btn-group btn-group-toggle rushmore-states" data-toggle="buttons">
+                <label class="btn btn-secondary">
+                    <input type="radio" name="rushmore" id="westVirginia" autocomplete="off" checked> West Virginia
+                </label>
+                <label class="btn btn-secondary">
+                    <input type="radio" name="rushmore" id="southDakota" autocomplete="off"> South Dakota
+                </label>
+                <label class="btn btn-secondary">
+                    <input type="radio" name="rushmore" id="arizona" autocomplete="off"> Arizona
+                </label>
+            </div>
+          <button class="btn btn-warning" id="rushmore_states">Check answer</button>
+          <p id="correct_rushmore_states"></p>
+
+          <br>
+
+          <p>10.) Which state has the Grand Canyon?</p>
+            <div class="btn-group btn-group-toggle grand-states" data-toggle="buttons">
+                <label class="btn btn-secondary">
+                    <input type="radio" name="grand" id="westVirginia" autocomplete="off" checked> West Virginia
+                </label>
+                <label class="btn btn-secondary">
+                    <input type="radio" name="grand" id="nevada" autocomplete="off"> Nevada
+                </label>
+                <label class="btn btn-secondary">
+                    <input type="radio" name="grand" id="arizona" autocomplete="off"> Arizona
+                </label>
+            </div>
+          <button class="btn btn-warning" id="grand_states">Check answer</button>
+          <p id="correct_grand_states"></p>
+    </div>
+    
+</body>
+</html>
